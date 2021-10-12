@@ -36,7 +36,7 @@ namespace ConsoleApp2
             Console.WriteLine();
 
                 string numA_result;
-                bool numA_success = int.TryParse(numA_result, out numA_result);
+                bool numA_success = int.TryParse
 
 
             Console.WriteLine();
@@ -44,19 +44,26 @@ namespace ConsoleApp2
             Console.WriteLine();
 
                 string numB_result;
-                bool numB_success = int.TryParse(numB_result, out numB_result);
+                bool numB_success = int.TryParse
 
 
             switch (action_result)
                 {
-                    case '1': 
+                    case 1:
+                            Console.WriteLine("Výsledek je: " + numA_result + numB_result);
+                            break;
 
+                        case 2:
+                            Console.WriteLine("Výsledek je: " + numA_result - numB_result);
+                            break;
 
-                    case '2':
+                        case 3:
+                            Console.WriteLine("Výsledek je: " + numA_result * numB_result);
+                            break;
 
-                    case '3':
-
-                    case '4':
+                        case 4:
+                            Console.WriteLine("Výsledek je: " + numA_result / numB_result);
+                            break;
                 }
             
         }

@@ -1,0 +1,7 @@
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\bin\Debug\ConsoleApp2.exe.config
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\bin\Debug\ConsoleApp2.exe
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\bin\Debug\ConsoleApp2.pdb
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\obj\Debug\ConsoleApp2.exe
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\obj\Debug\ConsoleApp2.pdb
+C:\Users\vaia\Source\Repos\gymspit.pg3.21\obj\Debug\ConsoleApp2.csproj.AssemblyReference.cache

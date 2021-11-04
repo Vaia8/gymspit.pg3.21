@@ -82,7 +82,7 @@ namespace ConsoleApp2
                     break;
 
                 case 4:
-                        if (numberB = 0) {
+                        if (numberB <1) {
                             Console.WriteLine("Nelze dělit nulou");
                         }
                     else Console.WriteLine("Výsledek je: " + (numberA / numberB));

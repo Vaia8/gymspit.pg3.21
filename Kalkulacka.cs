@@ -15,11 +15,12 @@ namespace ConsoleApp2
             Console.WriteLine("2 = odečítání");
             Console.WriteLine("3 = násobení");
             Console.WriteLine("4 = dělení");
+            Console.WriteLine("5 = odejít");
 
             int operation;
             string s = Console.ReadLine();
             bool actionSuccess = int.TryParse(s, out operation);
-
+            while (operation !=5) {
             while (!actionSuccess || operation > 4 || operation < 1)
             {
                 Console.WriteLine();
@@ -81,8 +82,12 @@ namespace ConsoleApp2
                     break;
 
                 case 4:
-                    Console.WriteLine("Výsledek je: " + (numberA / numberB));
+                        if numberB = 0 {
+                            Console.WriteLine("Nelze dělit nulou");
+                            else Console.WriteLine("Výsledek je: " + (numberA / numberB));
+                        }
                     break;
+            }
             }
             Console.WriteLine("Pro ukončení zmáčkněte enter.");
             Console.ReadLine();

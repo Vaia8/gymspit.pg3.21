@@ -20,7 +20,7 @@ namespace ConsoleApp2
             int operation;
             string s = Console.ReadLine();
             bool actionSuccess = int.TryParse(s, out operation);
-            while (operation !=5) {
+            
             while (!actionSuccess || operation > 4 || operation < 1)
             {
                 Console.WriteLine();
@@ -29,6 +29,7 @@ namespace ConsoleApp2
                 Console.WriteLine("2 = odečítání");
                 Console.WriteLine("3 = násobení");
                 Console.WriteLine("4 = dělení");
+		Cinsole.WriteLine("5 = odejít");
 
                 s = Console.ReadLine();
                 actionSuccess = int.TryParse(s, out operation);
@@ -90,7 +91,7 @@ namespace ConsoleApp2
                 case 5:
 	                System.Environment.Exit(0);
 	                break;
-            }
+            
             }
             Console.WriteLine("Pro ukončení zmáčkněte enter.");
             Console.ReadLine();

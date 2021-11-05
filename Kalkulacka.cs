@@ -87,6 +87,9 @@ namespace ConsoleApp2
                         }
                     else Console.WriteLine("Výsledek je: " + (numberA / numberB));
                     break;
+                case 5:
+	                System.Environment.Exit(0);
+	                break;
             }
             }
             Console.WriteLine("Pro ukončení zmáčkněte enter.");

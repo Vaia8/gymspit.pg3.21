@@ -29,7 +29,7 @@ namespace ConsoleApp2
                 Console.WriteLine("2 = odečítání");
                 Console.WriteLine("3 = násobení");
                 Console.WriteLine("4 = dělení");
-		Cinsole.WriteLine("5 = odejít");
+		Console.WriteLine("5 = odejít");
 
                 s = Console.ReadLine();
                 actionSuccess = int.TryParse(s, out operation);

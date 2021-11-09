@@ -8,89 +8,63 @@ namespace Kalkulacka
         {
             while (true)
             {
+
                 int operation = ReadOperation();
 
-               /* if (operation == 5)
-                {
-                    return;
-                }
-                */
-                Console.WriteLine();
-                Console.WriteLine("Zadej ƒç√≠slo A: ");
-                Console.WriteLine();
+                int numberA = ReadNumber("A");
 
-                int numberA;
-                string s = Console.ReadLine();
-                bool actionSuccess = int.TryParse(s, out numberA);
-
-                while (!actionSuccess)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Neplatn√© zad√°n√≠ ƒç√≠sla, pros√≠m zadej ƒç√≠slo A: ");
-                    s = Console.ReadLine();
-                    actionSuccess = int.TryParse(s, out numberA);
-
-                }
-
-                Console.WriteLine();
-                Console.WriteLine("Zadej ƒç√≠slo B: ");
-                Console.WriteLine();
-
-                int numberB;
-                s = Console.ReadLine();
-                actionSuccess = int.TryParse(s, out numberB);
-
-                while (!actionSuccess)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Neplatn√© zad√°n√≠ ƒç√≠sla, pros√≠m zadej ƒç√≠slo B: ");
-                    s = Console.ReadLine();
-                    actionSuccess = int.TryParse(s, out numberB);
-                }
+                int numberB = ReadNumber("B");
 
                 switch (operation)
                 {
                     case 1:
-                        Console.WriteLine("V√Ωsledek je: " + (numberA + numberB));
+                        Console.WriteLine("V˝sledek je: " + (numberA + numberB));
                         break;
 
                     case 2:
-                        Console.WriteLine("V√Ωsledek je: " + (numberA - numberB));
+                        Console.WriteLine("V˝sledek je: " + (numberA - numberB));
                         break;
 
                     case 3:
-                        Console.WriteLine("V√Ωsledek je: " + (numberA * numberB));
+                        Console.WriteLine("V˝sledek je: " + (numberA * numberB));
                         break;
 
                     case 4:
-                        if (numberB < 1)
+                        if (numberB == 0)
                         {
-                            Console.WriteLine("Nelze dƒõlit nulou");
+                            Console.WriteLine("Nelze dÏlit nulou");
                         }
-                        else Console.WriteLine("V√Ωsledek je: " + (numberA / numberB));
+                        else
+                        {
+                            Console.WriteLine("V˝sledek je: " + (numberA / numberB));
+                        }
                         break;
                 }
+                Console.WriteLine();
             }
-            Console.WriteLine("Pro ukonƒçen√≠ zm√°ƒçknƒõte enter.");
-            Console.ReadLine();
-
-
         }
         static int ReadOperation()
-            {
-            int operation = 0;
+        {
+            bool firstEntry = true;
+            int operation = 1;
             bool actionSuccess = true;
-            while (!actionSuccess || operation > 5 || operation < 1)
+            while (!actionSuccess || operation > 5 || operation < 1 || firstEntry)
             {
-                Console.WriteLine();
+                firstEntry = false;
                 if (!actionSuccess || operation > 5 || operation < 1)
-                   {
-                    Console.WriteLine("Chybn√© zad√°n√≠, vyber operaci: ");
+                {
+                    Console.WriteLine("ChybnÈ zad·nÌ, vyber operaci: ");
+                    Console.WriteLine();
                 }
-                    PrintOperationInstruction();
-                    string s = Console.ReadLine();
-                    actionSuccess = int.TryParse(s, out operation);
-                
+                Console.WriteLine("Vyber operaci: ");
+                Console.WriteLine("1 = sËÌt·nÌ");
+                Console.WriteLine("2 = odeËÌt·nÌ");
+                Console.WriteLine("3 = n·sobenÌ");
+                Console.WriteLine("4 = dÏlenÌ");
+                Console.WriteLine("5 = odejÌt");
+                string s = Console.ReadLine();
+                actionSuccess = int.TryParse(s, out operation);
+
             }
             if (operation == 5)
             {
@@ -99,15 +73,24 @@ namespace Kalkulacka
             return operation;
 
         }
-        static void PrintOperationInstruction ()
+        static int ReadNumber(string name)
         {
+            
             Console.WriteLine();
-            Console.WriteLine("Vyber operaci: ");
-            Console.WriteLine("1 = sƒç√≠t√°n√≠");
-            Console.WriteLine("2 = odeƒç√≠t√°n√≠");
-            Console.WriteLine("3 = n√°soben√≠");
-            Console.WriteLine("4 = dƒõlen√≠");
-            Console.WriteLine("5 = odej√≠t");
+            Console.WriteLine("Zadej ËÌslo " + name + ":");
+            Console.WriteLine();
+            int number;
+            string s = Console.ReadLine();
+            bool actionSuccess = int.TryParse(s, out number);
+            while (!actionSuccess)
+            {
+                Console.WriteLine();
+                Console.WriteLine("NeplatnÈ zad·nÌ ËÌsla, opakujte zad·nÌ: ");
+                s = Console.ReadLine();
+                actionSuccess = int.TryParse(s, out number);
+            }
+            return number;
         }
-    }
+
+    } 
 }
